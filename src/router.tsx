@@ -8,7 +8,7 @@ import Layout from './components/layout'
 import { NavGroup } from './components/layout/types'
 import { useAuth } from './context/auth/authContext'
 import Login from './features/authentication/login'
-import Register from './features/authentication/register'
+// import Register from './features/authentication/register'
 import Kanban from './features/kanban'
 import CreateKanban from './features/kanban/create'
 import DetailKanban from './features/kanban/detail'
@@ -87,10 +87,10 @@ const publicRoutes = [
     path: '/',
     element: <Login />
   },
-  {
-    path: '/register',
-    element: <Register />
-  },
+  // {
+  //   path: '/register',
+  //   element: <Register />
+  // },
   { path: '*', element: <Navigate to='/' replace /> }
 ]
 

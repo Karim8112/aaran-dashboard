@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input'
 import { useAuth } from '@/context/auth/authContext'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { Link, useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 import { z } from 'zod'
 
 const FormSchema = z.object({
@@ -83,7 +83,7 @@ export default function Login() {
                 name='identifier'
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Username</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
@@ -112,12 +112,12 @@ export default function Login() {
               <Button type='submit' className='w-full'>
                 Login
               </Button>
-              <p className='text-center text-sm'>
+              {/* <p className='text-center text-sm'>
                 Don't have an account?{' '}
                 <Link to='/register' className='text-blue-500 hover:underline'>
                   Register here
                 </Link>
-              </p>
+              </p> */}
             </CardFooter>
           </form>
         </Form>
